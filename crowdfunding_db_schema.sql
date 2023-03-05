@@ -81,12 +81,6 @@ REFERENCES "category" ("category_id");
 ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_subcategory_id" FOREIGN KEY("subcategory_id")
 REFERENCES "subcategory" ("subcategory_id");
 
-ALTER TABLE "backers" ADD CONSTRAINT "fk_backers_backers_id_cf_id_first_name" FOREIGN KEY("backers_id", "cf_id", "first_name")
-REFERENCES "backer_dict" ("backer_id", "cf_id", "name");
-
-ALTER TABLE "backers" ADD CONSTRAINT "fk_backers_last_name" FOREIGN KEY("last_name")
-REFERENCES "backer_dict" ("name");
-
-ALTER TABLE "backer_dict" ADD CONSTRAINT "fk_backer_dict_email" FOREIGN KEY("email")
-REFERENCES "backers" ("email");
+ALTER TABLE "backers" ADD CONSTRAINT "fk_backers_backers_id" FOREIGN KEY("backers_id")
+REFERENCES "backer_dict" ("backer_id");
 
