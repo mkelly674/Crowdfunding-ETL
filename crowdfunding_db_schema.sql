@@ -1,4 +1,4 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
+-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
 
@@ -69,8 +69,8 @@ CREATE TABLE "backer_dict" (
      )
 );
 
-ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_cf_id" FOREIGN KEY("cf_id")
-REFERENCES "backers" ("cf_id");
+ALTER TABLE "campaign" ADD CONSTRAINT "fk_backers_cf_id" FOREIGN KEY("cf_id")
+REFERENCES "campaign" ("cf_id");
 
 ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_contact_id" FOREIGN KEY("contact_id")
 REFERENCES "contacts" ("contact_id");
